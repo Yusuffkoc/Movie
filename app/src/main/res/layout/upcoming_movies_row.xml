@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/movieImage"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/movieName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_140"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:gravity="center"
+        android:text="Helllo"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/movieDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movieName"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="asdsadsa asd as as asd as asd as "
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14" />
+
+</RelativeLayout>

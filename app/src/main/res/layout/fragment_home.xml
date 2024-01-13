@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/upcomingMoviesRl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_16">
+
+                <RelativeLayout
+                    android:id="@+id/upcomingMovieRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/upcomingMovies"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        tools:listitem="@layout/upcoming_movies_row" />
+
+                    <ProgressBar
+                        android:id="@+id/paginationProgressBar2"
+                        style="?attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                        android:id="@+id/dots_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/upcomingMovies"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_12"
+                        app:dotsColor="@color/white"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="10dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsStrokeWidth="2dp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/movieRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/upcomingMovieRl"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/now_playing_movies_row" />
+
+                <ProgressBar
+                    android:id="@+id/paginationProgressBar"
+                    style="?attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

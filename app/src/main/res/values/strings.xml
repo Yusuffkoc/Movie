@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="base_error_message">"An Error Occured: "</string>
+
+    //Base-Fragment
+    <string name="loading">Loading...!!!</string>
+
+    //DetailFragment
+    <string name="buttonText">Discover Popular Movies</string>
+
+    //PopularMoviesFragment
+    <string name="popular_page">Popular Movies</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/pageRl"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/backLayoutId"
+        layout="@layout/title_row" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieRV"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/backLayoutId"
+        tools:itemCount="4"
+        tools:listitem="@layout/now_playing_movies_row" />
+
+    <ProgressBar
+        android:id="@+id/paginationProgressBar"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible" />
+
+</RelativeLayout>
